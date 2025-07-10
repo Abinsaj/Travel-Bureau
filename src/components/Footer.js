@@ -1,4 +1,6 @@
 import { Instagram, Facebook, Linkedin, MessageCircle, Globe } from "lucide-react"
+import Image from "next/image"
+
 
 export function Footer() {
     return (
@@ -8,23 +10,19 @@ export function Footer() {
             <div className=" mx-auto px-4 pt-10 py-5">
                 <div className="grid md:grid-cols-2  mb-12 ">
                     <div className="pl-10">
-                        <div className="flex items-center mb-8  ">
+                        <div className="flex items-center mb-8">
                             <div className="flex items-center mr-4">
-                                <div className="flex flex-col space-y-1">
-                                    <div className="w-6 h-1 bg-white transform -rotate-12"></div>
-                                    <div className="w-8 h-1 bg-white transform -rotate-6"></div>
-                                    <div className="w-10 h-1 bg-white"></div>
-                                </div>
-                                <div className="mx-3 text-center">
-                                    <div className="text-2xl font-bold">TB</div>
-                                    <div className="text-xs font-bold">GO</div>
-                                </div>
-                                <div className="flex flex-col space-y-1">
-                                    <div className="w-6 h-1 bg-white transform rotate-12"></div>
-                                    <div className="w-8 h-1 bg-white transform rotate-6"></div>
-                                    <div className="w-10 h-1 bg-white"></div>
+                                <div className="w-20 h-20 relative overflow-hidden pt-5">
+                                    <Image
+                                        src="/images/logo.png"
+                                        alt="Tropical beach destination with limestone cliffs"
+                                        width={200}
+                                        height={200}
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
                                 </div>
                             </div>
+
                             <div>
                                 <div className="text-2xl font-bold">TOURISTS TRAVEL</div>
                                 <div className="text-lg font-bold">
@@ -32,6 +30,7 @@ export function Footer() {
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="flex flex-col space-y-3 mb-8">
                             <div className="flex space-x-3">

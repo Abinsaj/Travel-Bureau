@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Sidebar } from "./Siderbar"
+import Image from "next/image"
 
 export function Header() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -39,16 +40,21 @@ export function Header() {
                             <Menu className="h-6 w-6" />
                         </button> */}
 
-                        <div className="absolute left-1/2 transform -translate-x-1/2">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                                <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                                    <span className="text-white text-xs font-bold">TB</span>
-                                </div>
+                        <div className="absolute left-1/2 transform -translate-x-1/2  hidden md:block">
+                            <div className="w-20 h-20 relative overflow-hidden pt-5">
+                                <Image
+                                    src="/images/logo.png"
+                                    alt="Tropical beach destination with limestone cliffs"
+                                    width={200}
+                                    height={200}
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
                             </div>
                         </div>
 
 
-                        <button className="text-white bg-neutral-400 h-10 w-32 rounded-3xl hover:text-white/80 transition-colors text-sm font-medium">
+
+                        <button className="text-white bg-neutral-400 h-10 w-32 rounded-3xl hover:text-white/80 transition-colors text-sm font-medium ">
                             Book Your Story
                         </button>
                     </div>
